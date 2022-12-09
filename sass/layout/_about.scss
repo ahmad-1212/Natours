@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  gap: 6rem;
+
+  @include responsive(tab-port) {
+    flex-direction: column;
+    justify-content: center;
+    // justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    flex-basis: 50%;
+    padding: 0 5rem;
+
+    @include responsive(tab-land) {
+      padding: 0;
+    }
+
+    @include responsive(tab-port) {
+      width: 70%;
+    }
+    @include responsive(phone) {
+      width: 90%;
+    }
+  }
+
+  &__images--box {
+    flex: 1;
+
+    @include responsive(tab-port) {
+      width: 70%;
+    }
+    @include responsive(phone) {
+      width: 90%;
+    }
+  }
+}

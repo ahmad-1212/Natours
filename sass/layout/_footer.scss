@@ -1,0 +1,77 @@
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @include responsive(phone) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigations {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__navigations-list {
+    border-top: 1px solid $color-grey-dark;
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+
+    @include responsive(phone) {
+      border-top: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:3rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    // font-size: inherit;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-grey-light-1;
+      background-color: $color-grey-dark-3;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+
+  &__copy-right {
+    font-size: 1rem;
+    text-align: center;
+    color: $color-grey-dark;
+    margin-top: 3rem;
+  }
+}
